@@ -213,7 +213,7 @@
     text-decoration: none;
     /* font-size: 20px; */
     /* border-radius: 10px; */
-    top: -20px;
+    top: -40px;
     left: 50%;
     transform: translate(-50%, -20%);
 }
@@ -314,8 +314,8 @@
 }
 
 .visit_company_logo img {
-    width: 80px;
-    height: 80px;
+width: 130px;
+    height: 130px;
     background: #fff;
     padding: 5px;
     border-radius: 50%;
