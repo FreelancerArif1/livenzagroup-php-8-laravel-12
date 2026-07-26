@@ -178,8 +178,10 @@
 
     <!-- all css -->
     <link rel="stylesheet" href="/frontend/assets/css/vendor.css">
-    <link rel="stylesheet" href="/frontend/assets/css/style.css">
+    <link rel="stylesheet" href="/frontend/assets/css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="/frontend/assets/css/custom.css?v=<?php echo time(); ?>">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+      
     <title>
         @hasSection('title')
             @yield('title')

@@ -8,8 +8,8 @@
                         <div class="col-12 col-md-5 col-lg-5 text-left">
                             <ul class="footer-menu livenza_footer">
                                 <li>
-                                    <a class="text text-14 link" aria-label="Privacy Policy">
-                                        Copyright © 2025 Livenza Group. All rights reserved.
+                                   <a class="text text-11 link" aria-label="Privacy Policy">
+                                        Copyright &copy; {{ date('Y') }} Livenza Group. All rights reserved.
                                     </a>
                                 </li>
                             </ul>
@@ -17,18 +17,18 @@
                         <div class="col-12 col-md-7 col-lg-7 text-right">
                             <ul class="footer-menu livenza_footer float-end livenza_footer_legal">
                                 <li>
-                                    <a href="privacy-policy.html" class="text text-14 link" aria-label="Privacy Policy">
+                                    <a href="privacy-policy.html" class="text text-11 link" aria-label="Privacy Policy">
                                         Privacy Policy
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="faq.html" class="text text-14 link" aria-label="FAQ">
+                                    <a href="faq.html" class="text text-11 link" aria-label="FAQ">
                                         Terms & Conditions
 
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="contact.html" class="text text-14 link" aria-label="FAQ">
+                                    <a href="contact.html" class="text text-11 link" aria-label="FAQ">
                                         Cookie Policy
 
                                     </a>

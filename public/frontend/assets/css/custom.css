@@ -27,7 +27,7 @@
     content: "";
     display: inline-block;
     width: 1px;
-    height: 12px;
+    height: 7px;
     background: #fff;
     margin-left: 5px;
     margin-right: 5px;
@@ -54,12 +54,12 @@
 }
 
 .footer-bottom {
-    padding: 10px 0;
+    padding: 3px 0px 7px 0px;
 }
 
 @media (max-width: 1600px) {
     .menu-link-main {
-        padding: 25px 20px;
+        padding: 25px 15px;
     }
 }
 
@@ -452,7 +452,7 @@ width: 100px;
 }
 
 .product-grid {
-    row-gap: 5px;
+    row-gap: 0px;
 }
 
 .circular_serial {
@@ -491,3 +491,30 @@ width: 100px;
 #career_page ul {
     padding-left: 15px !important;
 }
+/*.card-project:hover .card-project-content {*/
+/*    transform: translateY(-140px) !important;*/
+/*    text-align:center;*/
+/*        margin: 0 auto;*/
+/*}*/
+
+@media (min-width: 1200px) {
+.page-projects .container-fluid{
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

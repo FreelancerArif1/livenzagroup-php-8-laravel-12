@@ -4,13 +4,13 @@
     <main id="homepage" style="background-image: url(/frontend/assets/img/footer/footer-bg-larged.jpg)">
 
         <!-- Projects -->
-        <div class="page-projects pt-5 pb-5">
+        <div class="page-projects">
             <div class="container-fluid">
                 <div class="row product-grid">
 
                     @if ($companies)
                         @foreach ($companies as $company)
-                            <div class="col-12 col-sm-6 col-lg-4 col-xl-4 single_company_box mb-3" data-aos="fade-up"
+                            <div class="col-12 col-sm-6 col-lg-4 col-xl-4 single_company_box p-0" data-aos="fade-up"
                                 data-aos-delay="200">
                                 <a class="card-project radius18" aria-label="project details"
                                     href="{{ route('single.company', $company->slug) }}">
@@ -18,8 +18,8 @@
                                         loading="lazy">
                                     <div class="card-project-content-absolute">
                                         <div class="card-project-content">
-                                            <h2 class="heading text-20">{{ $company->title }}</h2>
-                                            <p class="text text-16">{{ $company->sub_title }}</p>
+                                            <h2 class="heading text-18-18">{{ $company->title }}</h2>
+                                            <p class="text text-13-13">{{ $company->sub_title }}</p>
                                         </div>
                                     </div>
 
