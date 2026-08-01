@@ -41,7 +41,7 @@
     <link rel="icon" type="image/png" sizes="192x192"
         href="{{ Helper::getSettings('site_favicon') ? asset(Helper::getSettings('site_favicon')) : '/favicon.png' }}">
 
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <style>
         :root {
             /* Typography */
@@ -180,7 +180,7 @@
     <link rel="stylesheet" href="/frontend/assets/css/vendor.css">
     <link rel="stylesheet" href="/frontend/assets/css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="/frontend/assets/css/custom.css?v=<?php echo time(); ?>">
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
       
     <title>
         @hasSection('title')
