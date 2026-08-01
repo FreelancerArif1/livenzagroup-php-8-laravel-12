@@ -618,4 +618,27 @@ width: 100px;
     .card-project img {
     object-fit: contain;
 }
+
+
+.job_title {
+    padding: 0px;
+}
+.job_deadline ul{
+    padding-left: 0;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+.button {
+    padding: 2px 10px 2px 10px !important;
+    margin-top: 5px !important;
+}
+.textright{
+  text-align: left;
+}
+.circular_serial {
+    height: 30px;
+    width: 30px;
+    padding: 7px;
+    font-size: 11px;
+}
 }

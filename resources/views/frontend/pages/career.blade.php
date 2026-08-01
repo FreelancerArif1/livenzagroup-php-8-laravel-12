@@ -395,13 +395,13 @@
                                 @endphp
                                 @foreach ($circulars as $circular)
                                     <div class="row single_circlar">
-                                        <div class="col-md-1">
+                                        <div class="col-2 col-sm-2 col-md-1">
                                             <div class="circular_serial"> {{ $i }}</div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-10 col-sm-10 col-md-3">
                                             <div class="job_title">{{ $circular->job_title }}</div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-12 col-sm-12 col-md-3">
                                             <div class="job_deadline">
                                                 <ul>
                                                     <li> <b>Start Date: </b>
@@ -413,7 +413,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-3" style="text-align: right;">
+                                        <div class="col-6 col-sm-6 col-md-3" style="textright;">
                                             <a href="{{ $circular->pdf }}" target="__blank">
                                                 <button type="submit" class="pdf_bnt button button--secondary"
                                                     aria-label="Send Message">
@@ -422,7 +422,7 @@
                                             </a>
 
                                         </div>
-                                        <div class="col-md-2 text-right" style="text-align: right;">
+                                        <div class="col-6 col-sm-6 col-md-2 text-right" style="text-align: right;">
                                             <a href="{{ route('career.single', $circular->job_slug) }}">
                                                 <button type="submit" class="apply_btn button button--secondary"
                                                     aria-label="Send Message">

@@ -8259,3 +8259,7 @@ footer .logo-with-newsletter .social-link:hover {
     padding-block-start: 60px;
   }
 }
+
+.textright{
+  text-align: right;
+}
