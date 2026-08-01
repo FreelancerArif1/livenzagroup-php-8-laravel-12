@@ -595,4 +595,15 @@ width: 100px;
 .header-menu>* {
     padding-left: 20px;
 }
+.image-text-video .heading {
+        font-size: 16px;
+        padding-top: 10px;
+}
+.section-content {
+    margin-block-start: 20px;
+}
+.section-padding {
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+}
 }
