@@ -589,4 +589,10 @@ width: 100px;
 .livenza_footer li {
     line-height: 10px;
 }
+.header-nav {
+    top:50px;
+}
+.header-menu>* {
+    padding-left: 20px;
+}
 }
