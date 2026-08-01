@@ -641,4 +641,10 @@ width: 100px;
     padding: 7px;
     font-size: 11px;
 }
+.company_logo img {
+    max-width: 170px;
+}
+.text-20 {
+    font-size: 14px !important;
+}
 }
