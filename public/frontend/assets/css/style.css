@@ -5146,9 +5146,9 @@ project-slider .swiper-slide {
 
 .card-project:hover .card-project-content {
   opacity: 1;
-  -webkit-transform: translateY(-80%);
-  -ms-transform: translateY(-80%);
-  transform: translateY(-80%);
+  -webkit-transform: translateY(-70%);
+  -ms-transform: translateY(-70%);
+  transform: translateY(-70%);
   text-align:center;
       margin: 0 auto;
 }
