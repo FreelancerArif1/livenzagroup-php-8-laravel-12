@@ -606,4 +606,13 @@ width: 100px;
     --padding-top: 20px;
     --padding-bottom: 20px;
 }
+
+    .collapsicon2 svg {
+        width: 25px;
+        height: 25px; /* Optional */
+    }
+    .closeicon svg{
+        width: 20px;
+        height: 20px; /* Optional */
+    }
 }

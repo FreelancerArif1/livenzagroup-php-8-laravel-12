@@ -115,5 +115,8 @@
         $('.collapsicon').show();
     });
 
+    // $('.closeicon2 svg').width('25');
+    // $('.collapsicon2 svg').width('25');
+
 });
 </script>
