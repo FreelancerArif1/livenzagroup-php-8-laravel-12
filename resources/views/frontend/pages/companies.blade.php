@@ -2,7 +2,7 @@
 @section('title', 'Companies | ' . Helper::getSettings('application_name') ?? 'Livenza Group')
 @section('content')
     <main id="blog_page">
-        <div class="page-banner company_image overlay">
+        <div class="page-banner overlay">
             <div class="media media-bg">
                 <img src="/uploads/about/692c50dc5a42c_1764511964.jpg" width="1920" height="520" loading="eager"
                     alt="Page Banner Image">
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div class="page-projects pt-5 pb-5">
+        <div class="page-projects company_image pt-5 pb-5">
             <div class="container-fluid">
                 <div class="row product-grid">
                     @if ($companies)
