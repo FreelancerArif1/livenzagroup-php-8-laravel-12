@@ -658,4 +658,10 @@ width: 100px;
 .single_page_description, .single_page_description p, .single_page_description a, .single_page_description span, .single_page_description p span {
     font-size: 15px !important;
 }
+.single_blog{
+    margin-bottom: 15px;
+}
+.card-blog-heading .text-30{
+        font-size: 22px;
+}
 }

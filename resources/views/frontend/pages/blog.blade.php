@@ -33,7 +33,7 @@
                 <div class="row product-grid">
                     @if ($news)
                         @foreach ($news as $item)
-                            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="col-12 col-md-6 col-lg-4 single_blog" data-aos="fade-up" data-aos-delay="100">
                                 <div class="card-blog radius18">
                                     <div class="card-blog-top">
                                         <div class="card-blog-meta">
