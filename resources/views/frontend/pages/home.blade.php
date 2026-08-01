@@ -47,7 +47,7 @@
             @if ($companies)
                 @foreach ($companies as $company)
                     <div class="single_company_box" data-aos="fade-up">
-                        <a class="card-project radius18" href="{{ route('single.company', $company->slug) }}">
+                        <a class="card-project" href="{{ route('single.company', $company->slug) }}">
                             <img src="{{ $company->image }}" alt="project image" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">

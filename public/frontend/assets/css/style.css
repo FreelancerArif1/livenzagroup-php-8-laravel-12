@@ -8240,9 +8240,10 @@ footer .logo-with-newsletter .social-link:hover {
     gap: 10px 30px;
   }
 
-  .footer-bottom-row {
-    gap: 24px;
-  }
+    .footer-bottom-row {
+        gap: 0px;
+        padding-top: 15px;
+    }
 
   .footer-widget-brand .social-icons {
     -webkit-margin-before: 30px;

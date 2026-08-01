@@ -2,7 +2,7 @@
         <header class="header-1 header-floating">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-6 col-sm-6 col-md-4">
                         <div class="header-actions d-flex align-items-center">
                             <drawer-opener class="collapsicon svg-wrapper menu-open d-lg-none-has collapsmenu" data-drawer=".drawer-menu">
                                 <div class="collapsicon2">
@@ -21,7 +21,7 @@
                             </drawer-opener>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-6 col-sm-6 col-md-4">
                         <a class="menu-link menu-link-main logo_link" href="/">
                             <img src="{{ Helper::getSettings('site_logo') ? asset(Helper::getSettings('site_logo')) : '/logo.png' }}"
                                 alt="logo-image">
