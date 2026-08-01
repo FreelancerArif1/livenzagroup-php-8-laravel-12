@@ -615,4 +615,7 @@ width: 100px;
         width: 20px;
         height: 20px; /* Optional */
     }
+    .card-project img {
+    object-fit: contain;
+}
 }
