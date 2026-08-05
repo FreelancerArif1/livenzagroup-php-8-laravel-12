@@ -4,7 +4,7 @@
 
 #homepage {
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 .livenza_footer {
@@ -634,7 +634,7 @@ width: 100px;
 
 /* ===== Full viewport, no empty space ===== */
 .page-projects {
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
 }
 
@@ -642,7 +642,7 @@ width: 100px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 1fr);   /* exactly 2 rows → full 100vh */
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     gap: 4px;                             /* very small gap (almost seamless) */
     background: #000;
