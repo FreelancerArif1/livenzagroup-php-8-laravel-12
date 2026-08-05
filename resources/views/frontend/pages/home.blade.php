@@ -66,7 +66,7 @@
 
 
 
-<script>
+<!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
     const grid = document.getElementById("projectGrid");
     if (!grid) return;
@@ -96,7 +96,7 @@
         if (items[5]) items[5].style.gridArea = "6 / 5 / 7 / 7";
     }
 });
-</script>
+</script> -->
 
 
 
