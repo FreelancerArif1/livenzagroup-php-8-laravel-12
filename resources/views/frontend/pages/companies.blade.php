@@ -34,7 +34,7 @@
                     @if ($companies)
                         @foreach ($companies as $company)
                             @if ($company?->company_logo)
-                                <div class="col-sm-6 col-lg-3 col-xl-3 col-lg-3 single_company_box mb-3" data-aos="fade-up"
+                                <div class="col-12 col-sm-6 col-lg-3 col-xl-3 single_company_box mb-3" data-aos="fade-up"
                                     data-aos-delay="200">
                                     <a class="card-project copmany_card radius18" aria-label="project details"
                                         href="{{ $company->button_link }}" target="__blank">
