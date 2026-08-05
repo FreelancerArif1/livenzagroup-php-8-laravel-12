@@ -4,7 +4,7 @@
     <main id="homepage" style="background-image: url(/frontend/assets/img/footer/footer-bg-larged.jpg)">
 
         <!-- Projects -->
-        <!-- <div class="page-projects">
+        <div class="page-projects">
             <div class="container-fluid">
                 <div class="row product-grid">
 
@@ -31,7 +31,7 @@
                 </div>
 
             </div>
-        </div> -->
+        </div>
 
 
 
@@ -41,7 +41,7 @@
 
 
 
-        <div class="page-projects">
+        <!-- <div class="page-projects">
     <div class="container-fluid p-0">
         <div class="asymmetric-grid" id="projectGrid" data-total="{{ count($companies) }}">
             @if ($companies)
@@ -96,7 +96,7 @@
         if (items[5]) items[5].style.gridArea = "6 / 5 / 7 / 7";
     }
 });
-</script>
+</script> -->
 
 
 
