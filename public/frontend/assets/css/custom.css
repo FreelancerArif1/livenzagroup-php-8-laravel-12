@@ -508,6 +508,9 @@ width: 100px;
 .closeicon{
     display: none;
 }
+.company_page{
+    height: 220px !important;
+}
 
 @media (max-width: 1100px) {
 .logo_link img {
