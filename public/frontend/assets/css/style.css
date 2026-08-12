@@ -5128,8 +5128,8 @@ project-slider .swiper-slide {
 
 .card-project-content .heading+.text {
   -webkit-margin-before: 10px;
-  margin-block-start: 15px;
-  text-align:center;
+    margin-block-start: 0px;
+     /* text-align: center; */
 }
 
 .card-project-content {
@@ -5140,7 +5140,7 @@ project-slider .swiper-slide {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  text-align:center;
+  /* text-align:center; */
       margin: 0 auto;
 }
 
@@ -5149,7 +5149,7 @@ project-slider .swiper-slide {
   -webkit-transform: translateY(-70%);
   -ms-transform: translateY(-70%);
   transform: translateY(-70%);
-  text-align:center;
+  /* text-align:center; */
       margin: 0 auto;
 }
 

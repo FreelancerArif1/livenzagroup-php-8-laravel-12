@@ -75,9 +75,12 @@ class CompanyController extends Controller
                 'errors' => $validator->errors(),
             ], 422);
         }
-        $data = $request->except(['video', 'image']);
+        $data = $request->except(['video', 'image', 'company_logo']);
         if ($request->hasFile('image')) {
             $data['image'] = $this->fileUpload($request, 'image', '/uploads/company/');
+        }
+        if ($request->hasFile('company_logo')) {
+            $data['company_logo'] = $this->fileUpload($request, 'company_logo', '/uploads/company/');
         }
         if ($request->hasFile('video')) {
             $data['video'] = $this->fileUpload($request, 'video', '/uploads/company/');
@@ -129,13 +132,19 @@ class CompanyController extends Controller
         $company = Company::findOrFail($id);
 
         // Prepare data
-        $data = $request->except(['video', 'image']);
+        $data = $request->except(['video', 'image', 'company_logo']);
 
         if ($request->hasFile('image')) {
             if ($company->image && File::exists(public_path($company->image))) {
                 File::delete(public_path($company->image));
             }
             $data['image'] = $this->fileUpload($request, 'image', '/uploads/company/');
+        }
+        if ($request->hasFile('company_logo')) {
+            if ($company->company_logo && File::exists(public_path($company->company_logo))) {
+                File::delete(public_path($company->company_logo));
+            }
+            $data['company_logo'] = $this->fileUpload($request, 'company_logo', '/uploads/company/');
         }
 
         if ($request->hasFile('video')) {

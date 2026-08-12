@@ -14,6 +14,7 @@ class Company extends Model
         'short_description',
         'description',
         'image',
+        'company_logo',
         'video',
         'map',
         'serial',

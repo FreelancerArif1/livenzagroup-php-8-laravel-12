@@ -65,6 +65,13 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label>Company Logo (H:800px W:800px) </label>
+                                <input type="file" class="form-control" name="company_logo">
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-group">
                                 <label>Website Link</label>
                                 <input type="text" class="form-control" name="button_link"
                                     placeholder="Enter Website Link">

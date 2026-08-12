@@ -71,6 +71,15 @@
                         placeholder="Enter company name">
                 </div>
             </div>
+            <div class="col-md-6 company_logo">
+                <div class="form-group">
+                    <label>Company Logo (H:800px W:800px)</label>
+                    <input type="file" class="form-control" name="company_logo">
+                    @if ($company->company_logo)
+                        <img src="{{ asset($company->company_logo) }}" width="120" height="120" class="mt-2">
+                    @endif
+                </div>
+            </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Website Link</label>

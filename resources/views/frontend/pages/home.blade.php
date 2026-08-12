@@ -53,8 +53,18 @@
                             <img src="{{ $company->image }}" alt="{{ $company->title }}" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading">{{ $company->title }}</h2>
-                                    <p class="text">{{ $company->sub_title }}</p>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img class="homepage_logo" src="{{ $company->company_logo }}" alt="logo" alt="">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h2 class="heading">{{ $company->title }}</h2>
+                                            <!-- <p class="text">{{ $company->sub_title }}</p> -->
+                                        </div>
+                                    </div>
+                                   
+                                    
+                                    
                                 </div>
                             </div>
                         </a>
