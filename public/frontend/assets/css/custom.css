@@ -518,7 +518,9 @@ width: 100px;
   height: var(--size, 40px);
 }
 .contact_page_image img{
-        border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #dadadaa6;
+    padding: 3px;
 }
 @media (max-width: 1100px) {
 .logo_link img {
