@@ -54,10 +54,10 @@
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <!-- <div class="col-md-3">
                                             <img class="homepage_logo" src="{{ $company->company_logo }}" alt="logo" alt="">
-                                        </div>
-                                        <div class="col-md-9">
+                                        </div> -->
+                                        <div class="col-md-12">
                                             <h2 class="heading">{{ $company->title }}</h2>
                                             <!-- <p class="text">{{ $company->sub_title }}</p> -->
                                         </div>

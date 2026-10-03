@@ -11,6 +11,7 @@ use Helper;
 use App\Models\User;
 use App\Models\Slider;
 use App\Models\Company;
+use App\Models\Product;
 use App\Models\Partner;
 use App\Models\Portfolio;
 use App\Models\Sustainability;
@@ -52,9 +53,24 @@ class FrontendController extends Controller
         $portfolios = Portfolio::where('status', 1)->orderBy('serial', 'asc')->where('slier_for', $company->id)->get();
         $projects = Project::where('status', 1)->orderBy('serial', 'asc')->where('slier_for', $company->id)->get();
         $slider = Slider::where('slier_for', $company->id)->first();
-        return view('frontend.pages.companySingle', compact('slider', 'company', 'portfolios', 'projects'));
+        $products = Product::where('company_id', $company->id)->where('status', 1)->get();
+        
+        return view('frontend.pages.companySingle', compact('slider', 'company', 'portfolios', 'projects', 'products'));
     }
 
+
+    public function singleProduct($slug)
+    {
+        $product = Product::where('slug', $slug)->first();
+        $company = Company::where('id', $product->company_id)->first();
+        $slider = Slider::where('slier_for', $company->id)->first();
+        $products = Product::where('company_id', $company->id)->where('status', 1)->get();
+        return view('frontend.pages.productSingle', compact('company', 'products', 'slider'));
+    }
+
+
+
+    
 
     public function companies()
     {

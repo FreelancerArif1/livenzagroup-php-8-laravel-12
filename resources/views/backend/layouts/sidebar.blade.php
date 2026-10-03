@@ -172,6 +172,32 @@
                 @endif
 
 
+                @if (Helper::hasRight('product.view'))
+                    <li class="nav-item">
+                        <a data-bs-toggle="collapse" href="#product"
+                            aria-expanded="@if (Route::is('product.index')) true @else false @endif">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p class="ms-4">{{ trans('Product') }}</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse @if (Route::is('product.index') || Route::is('product.index')) show @endif" id="product">
+                            <ul class="nav nav-collapse">
+                                @if (Helper::hasRight('product.view'))
+                                    <li class="{{ Route::is('product.index') ? 'active' : '' }}">
+                                        <a href="{{ route('product.index') }}">
+                                            <span class="sub-item">{{ trans('Product List') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+
+                            </ul>
+                        </div>
+                    </li>
+                @endif
+
+
+                
+
                 @if (Helper::hasRight('setting.view'))
                     <li class="nav-item">
                         <a data-bs-toggle="collapse" href="#aboutus"

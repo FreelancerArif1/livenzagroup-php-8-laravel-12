@@ -12,6 +12,8 @@ use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Backend\CompanyController;
+use App\Http\Controllers\Backend\ProductController;
+
 use App\Http\Controllers\Backend\PortfolioController;
 use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\AboutController;
@@ -101,8 +103,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('slider', SliderController::class);
     Route::get('/slider-list', [SliderController::class, 'list'])->name('admin.slider.list');
 
+    Route::resource('product', ProductController::class);
+    Route::get('/product-list', [ProductController::class, 'list'])->name('admin.product.list');
+    
+
     Route::resource('company', CompanyController::class);
     Route::get('/company-list', [CompanyController::class, 'list'])->name('admin.company.list');
+    
     Route::resource('portfolio', PortfolioController::class);
     Route::get('/portfolio-list', [PortfolioController::class, 'list'])->name('admin.portfolio.list');
 
@@ -134,6 +141,7 @@ Route::get('/about-us', [FrontendController::class, 'about'])->name('about');
 Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact');
 Route::post('/contact-submit', [FrontendController::class, 'contactsubmit'])->name('contact.submit');
 Route::get('/company/{slug}', [FrontendController::class, 'singleCompany'])->name('single.company');
+Route::get('/product/{slug}', [FrontendController::class, 'singleProduct'])->name('single.product');
 Route::get('/news', [FrontendController::class, 'news'])->name('news');
 Route::get('/news/{slug}', [FrontendController::class, 'singleNews'])->name('single.news');
 Route::get('/sustainability', [FrontendController::class, 'sustainability'])->name('sustainability');

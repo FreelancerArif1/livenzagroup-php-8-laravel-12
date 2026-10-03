@@ -11,7 +11,7 @@
         <div class="heading_button profile-heading">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 style="margin: 0;padding-top: 5px;    font-size: 18px;">Companies</h1>
+                    <h1 style="margin: 0;padding-top: 5px; padding-bottom: 5px; font-size: 18px;">Companies</h1>
                 </div>
                 <div class="col-md-6 text-end">
                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#CreateModalOpen">Add

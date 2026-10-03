@@ -102,6 +102,65 @@
             </div>
         @endif
 
+
+
+
+
+
+
+
+
+        <!-- products -->
+        @if ($products)
+            <div class="featured-blog section-padding">
+                <div class="container">
+                    <div class="section-headings text-center">
+                        <h3 class="heading text-40 fw-700 text-uppercase" data-aos="fade-up" data-aos-delay="50">
+                            Our Collection
+                        </h3>
+                    </div>
+                    <div class="section-content">
+                        <div class="row product-grid justify-content-center">
+                            @if ($products)
+                                @foreach ($products as $item)
+
+
+
+                                    <div class="col-md-4">
+                                        <div class="product_single_card">
+                                            <div class="product_single_img_box">
+                                                <img src="{{ $item->image }}" alt="{{ $item->title }}" class="product_single_img">
+                                            </div>
+                                            <div class="product_single_body">
+                                                <h3 class="product_single_title">{{ $item->title }}</h3>
+                                                <p class="product_single_subtitle"> {{ \Carbon\Carbon::parse($item->reg_year)->format('Y') }}</p>
+                                                
+                                                <div class="product_single_specs">
+                                                    <span class="product_single_fuel">{{ $item->fuel_type }}</span>
+                                                    <span class="product_single_mileage"> {{ $item->mileage }}</span>
+                                                </div>
+                                                
+                                                <hr class="product_single_divider">
+                                                
+                                                <div class="product_single_price">BDT  {{ $item->price }}</div>
+                                                
+                                                <a href="{{ route('single.product', $item->slug) }}" class="product_single_btn">Show Details</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+
+
+
+
+
         <div class="container">
             <div class="row">
                 <div class="col-md-3"></div>
@@ -130,6 +189,11 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
 
 
 
@@ -184,7 +248,6 @@
                 </div>
             </div>
         @endif
-
 
 
         @if ($projects && count($projects) > 0)
