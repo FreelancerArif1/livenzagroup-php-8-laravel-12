@@ -847,52 +847,7 @@ font-size: 16px;
     color: #000000;
     text-decoration: none;
 }
-.multi_img_preview_container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 15px;
-}
 
-.multi_img_preview_box {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.multi_img_preview_box img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    display: block;
-}
-
-.multi_img_remove_btn {
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    background: rgba(220, 53, 69, 0.9);
-    color: #ffffff;
-    border: none;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
-    line-height: 28px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    padding: 0;
-}
-
-.multi_img_remove_btn:hover {
-    background: rgba(200, 35, 51, 1);
-}
 
 
 

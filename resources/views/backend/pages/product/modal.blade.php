@@ -35,11 +35,25 @@
                             </div>
                         </div>
 
+
+                        <!-- 1. Single Image Input -->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Image (H:800px W:800px) </label>
-                                <input type="file" class="form-control" name="image">
+                                <label>Featured Image (H:800px W:800px)</label>
+                                <input type="file" class="form-control" id="singleImageInput" name="image" accept="image/*">
                             </div>
+                            <!-- Single Preview Container -->
+                            <div id="singleImagePreviewContainer" class="mt-2"></div>
+                        </div>
+
+                        <!-- 2. Multiple Images Input -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Gallery Images (H:800px W:800px)</label>
+                                <input type="file" class="form-control" id="multipleImageInput" name="images[]" multiple accept="image/*">
+                            </div>
+                            <!-- Multiple Preview Container -->
+                            <div id="multipleImagePreviewContainer" class="d-flex flex-wrap gap-2 mt-2"></div>
                         </div>
 
                         <div class="col-md-6">
@@ -200,3 +214,113 @@
         </div>
     </div>
 </div>
+
+
+<style>
+.preview-item {
+        position: relative;
+        display: inline-block;
+        margin: 5px;
+    }
+    .preview-item img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .preview-item .remove-btn {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 18px;
+        cursor: pointer;
+        text-align: center;
+        padding: 0;
+    }
+</style>
+
+<script>
+// --- 1. SINGLE IMAGE PREVIEW ---
+document.getElementById('singleImageInput').addEventListener('change', function(e) {
+    const previewContainer = document.getElementById('singleImagePreviewContainer');
+    const input = this;
+    previewContainer.innerHTML = ''; // Clear previous preview
+
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        const previewItem = document.createElement('div');
+        previewItem.classList.add('preview-item');
+        
+        previewItem.innerHTML = `
+            <img src="${event.target.result}" alt="Single Image Preview">
+            <button type="button" class="remove-btn">&times;</button>
+        `;
+
+        // Remove single image
+        previewItem.querySelector('.remove-btn').addEventListener('click', function() {
+            previewItem.remove();
+            input.value = ''; // Reset input file value
+        });
+
+        previewContainer.appendChild(previewItem);
+    };
+    reader.readAsDataURL(file);
+});
+
+
+// --- 2. MULTIPLE IMAGES PREVIEW ---
+document.getElementById('multipleImageInput').addEventListener('change', function(e) {
+    const previewContainer = document.getElementById('multipleImagePreviewContainer');
+    const input = this;
+    previewContainer.innerHTML = ''; // Clear existing previews on new selection
+
+    const files = e.target.files;
+    const dt = new DataTransfer();
+
+    Array.from(files).forEach((file) => {
+        dt.items.add(file);
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const previewItem = document.createElement('div');
+            previewItem.classList.add('preview-item');
+            
+            previewItem.innerHTML = `
+                <img src="${event.target.result}" alt="Gallery Preview">
+                <button type="button" class="remove-btn">&times;</button>
+            `;
+
+            // Remove specific image from list
+            previewItem.querySelector('.remove-btn').addEventListener('click', function() {
+                previewItem.remove();
+                
+                // Re-build DataTransfer without the removed file
+                const updatedDt = new DataTransfer();
+                Array.from(input.files).forEach((f) => {
+                    if (f !== file) {
+                        updatedDt.items.add(f);
+                    }
+                });
+                
+                input.files = updatedDt.files;
+            });
+
+            previewContainer.appendChild(previewItem);
+        };
+        reader.readAsDataURL(file);
+    });
+
+    input.files = dt.files;
+});
+</script>
