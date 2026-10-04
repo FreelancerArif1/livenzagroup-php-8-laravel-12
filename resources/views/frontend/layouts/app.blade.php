@@ -30,6 +30,7 @@
     <meta name="keywords" content="{{ Helper::getSettings('application_fax') }}">
     <meta name="author" content="{{ Helper::getSettings('application_name') }}">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
@@ -42,6 +43,7 @@
         href="{{ Helper::getSettings('site_favicon') ? asset(Helper::getSettings('site_favicon')) : '/favicon.png' }}">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         :root {
             /* Typography */

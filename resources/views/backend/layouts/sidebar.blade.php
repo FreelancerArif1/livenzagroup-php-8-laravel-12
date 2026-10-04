@@ -180,12 +180,20 @@
                             <p class="ms-4">{{ trans('Product') }}</p>
                             <span class="caret"></span>
                         </a>
-                        <div class="collapse @if (Route::is('product.index') || Route::is('product.index')) show @endif" id="product">
+                        <div class="collapse @if (Route::is('product.index') || Route::is('servicecategory.index')) show @endif" id="product">
                             <ul class="nav nav-collapse">
                                 @if (Helper::hasRight('product.view'))
                                     <li class="{{ Route::is('product.index') ? 'active' : '' }}">
                                         <a href="{{ route('product.index') }}">
                                             <span class="sub-item">{{ trans('Product List') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+
+                                @if (Helper::hasRight('brand.view'))
+                                    <li class="{{ Route::is('servicecategory.index') ? 'active' : '' }}">
+                                        <a href="{{ route('servicecategory.index') }}">
+                                            <span class="sub-item">{{ trans('Brand') }}</span>
                                         </a>
                                     </li>
                                 @endif

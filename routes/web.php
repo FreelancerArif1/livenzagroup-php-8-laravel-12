@@ -13,7 +13,7 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Backend\CompanyController;
 use App\Http\Controllers\Backend\ProductController;
-
+use App\Http\Controllers\Backend\ServicecategoryController;
 use App\Http\Controllers\Backend\PortfolioController;
 use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\AboutController;
@@ -129,6 +129,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/careerpage-list', [CareerpageController::class, 'list'])->name('admin.careerpage.list');
     Route::resource('careerapply', JobAppliedController::class);
     Route::get('/careerapply-list', [JobAppliedController::class, 'list'])->name('admin.careerapply.list');
+    Route::resource('servicecategory', ServicecategoryController::class);
+    Route::get('/servicecategory-list', [ServicecategoryController::class, 'list'])->name('admin.servicecategory.list');
 
     Route::resource('circular', JobCircularController::class);
     Route::get('/circular-list', [JobCircularController::class, 'list'])->name('admin.circular.list');

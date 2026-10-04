@@ -85,19 +85,22 @@
                             </div>
                         </div>
 
-
-
-
-
-
-
-
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label>Brand</label>
-                                <input type="text" class="form-control" name="brand" placeholder="Enter Brand">
+                                <label>Select Brand</label>
+                                <select name="brand" class="form-control" required>
+                                    <option>--Select--</option>
+                                    @if($brands)
+                                    @foreach($brands as $brand)
+                                    <option value="{{ $brand->id }}">{{ $brand->title }}</option>
+                                    @endforeach
+                                    @endif
+                                    
+                                </select>
                             </div>
                         </div>
+
+
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Model</label>

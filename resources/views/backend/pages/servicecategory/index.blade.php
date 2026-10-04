@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'User | ' . Helper::getSettings('application_name') ?? 'Livenza Group')
+@section('title', 'User | ' . Helper::getSettings('application_name') ?? 'Welly international trading')
 @section('content')
     <div class="bo-container">
 
@@ -11,7 +11,7 @@
         <div class="heading_button profile-heading">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 style="margin: 0;padding-top: 5px; padding-bottom: 5px; font-size: 18px;">Products</h1>
+                    <h1 style="margin: 0;padding-top: 5px;    font-size: 18px;">Service Category</h1>
                 </div>
                 <div class="col-md-6 text-end">
                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#CreateModalOpen">Add
@@ -23,10 +23,8 @@
             <table id="dataTable" class="table table-bordered">
                 <thead>
                     <tr>
-                        <th></th>
+                        <!-- <th></th> -->
                         <th>Title</th>
-                        <th>Brand</th>
-                        <th>Company</th>
                         <th>Serial</th>
                         <th>Status</th>
                         <th class="action_column">Action</th>
@@ -36,7 +34,7 @@
 
         </div>
     </div>
-    @include('backend.pages.product.modal');
+    @include('backend.pages.servicecategory.modal');
     <script>
         $(document).ready(function() {
 
@@ -60,26 +58,20 @@
                 ],
 
                 ajax: {
-                    url: "{{ route('admin.product.list') }}",
+                    url: "{{ route('admin.servicecategory.list') }}",
                     type: 'GET'
                 },
 
-                columns: [{
-                        data: 'image',
-                        name: 'image'
-                    },
+                columns: [
+                    // {
+                    //     data: 'image',
+                    //     name: 'image'
+                    // },
                     {
                         data: 'title',
                         name: 'title'
                     },
-                    {
-                        data: 'brand',
-                        name: 'brand'
-                    },
-                    {
-                        data: 'company',
-                        name: 'company'
-                    },
+
                     {
                         data: 'serial',
                         name: 'serial'

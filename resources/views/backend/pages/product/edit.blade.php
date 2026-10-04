@@ -99,10 +99,19 @@
         </div>
 
         <!-- Product Specs -->
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="form-group">
-                <label class="form-label font-weight-bold">Brand</label>
-                <input type="text" class="form-control" name="brand" value="{{ old('brand', $product->brand ?? '') }}" placeholder="Enter Brand">
+                <label>Select Brand</label>
+                <select name="brand" class="form-control" required>
+                    <option value="">--Select--</option>
+                    @if (isset($brands) && count($brands) > 0)
+                        @foreach ($brands as $brand)
+                            <option value="{{ $brand->id }}" {{ old('brand', $product->brand) == $brand->id ? 'selected' : '' }}>
+                                {{ $brand->title }}
+                            </option>
+                        @endforeach
+                    @endif
+                </select>
             </div>
         </div>
         <div class="col-md-4">

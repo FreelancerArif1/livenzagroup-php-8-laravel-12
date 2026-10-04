@@ -13,6 +13,7 @@ use App\Models\Slider;
 use App\Models\Company;
 use App\Models\Product;
 use App\Models\Partner;
+use App\Models\Servicecategory;
 use App\Models\Portfolio;
 use App\Models\Sustainability;
 use App\Models\Careerpage;
@@ -61,8 +62,9 @@ class FrontendController extends Controller
 
     public function singleProduct($slug)
     {
-        $product = Product::where('slug', $slug)->firstOrFail();
         
+        $product = Product::where('slug', $slug)->firstOrFail();
+        $brand = Servicecategory::where('id', $product->brand)->first();
         // Decode stored JSON string into a PHP array
         $images = is_string($product->images) ? json_decode($product->images, true) : ($product->images ?? []);
 
@@ -70,8 +72,11 @@ class FrontendController extends Controller
         $slider = Slider::where('slier_for', $company->id ?? null)->first();
         $products = Product::where('company_id', $company->id ?? null)->where('status', 1)->get();
 
+        $brand_wise_products = Product::where('brand', $product->brand)->where('id', '!=', $product->id)->where('status', 1)->get();
+
+   
         // Pass $product and $images to the view
-        return view('frontend.pages.productSingle', compact('product', 'images', 'company', 'products', 'slider'));
+        return view('frontend.pages.productSingle', compact('product', 'images', 'company', 'products', 'slider', 'brand', 'brand_wise_products'));
     }
 
 

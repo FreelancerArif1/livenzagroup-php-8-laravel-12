@@ -762,12 +762,19 @@ font-size: 16px;
 
 
 
+#product_description{
+    /* background: rgb(0 51 204 / 7%);
+        padding: 50px 0px; */
+}
 
-
+.pmd5 {
+    padding: 3rem 3rem 1rem 3rem !important;
+}
 
 
 .product_single_card {
     background-color: #0d0d0d;
+    /* background: rgb(28, 37, 57); */
     border-radius: 16px;
     overflow: hidden;
     color: #ffffff;
@@ -912,12 +919,12 @@ font-size: 16px;
     }
 
     .btn-peach {
-        background-color: #fde2d1;
+        background-color: #043dc22b;
         color: #000000;
         border: none;
     }
     .btn-peach:hover {
-        background-color: #fbd3bc;
+        background-color: #043dc262;
         color: #000000;
     }
 
@@ -935,12 +942,59 @@ font-size: 16px;
     margin-left: 6px;
 }
 
+.callusbtn {
+    background-color: #043dc22b;
+    color: #000000;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    animation: gentlePulse 2s infinite;
+}
+
+.callusbtn:hover {
+    background-color: rgba(3, 51, 163, 0.438)2b;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+@keyframes gentlePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(4, 61, 194, 0.8);
+    }
+    70% {
+        box-shadow: 0 0 0 12px rgba(4, 61, 194, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(4, 61, 194, 0);
+    }
+}
 
 
 
+/* Image hover zoom transition */
+.hover-zoom {
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover .hover-zoom {
+    transform: scale(1.05);
+}
 
+/* Custom height for card images matching target design */
+.suggestedSwiper .ratio {
+    --bs-aspect-ratio: 130%; /* Vertical portrait vehicle card style */
+}
 
-
+/* Swiper Pagination Styling */
+.suggestedSwiper .swiper-pagination-bullet {
+    background-color: #ffffff;
+    opacity: 0.3;
+}
+.suggestedSwiper .swiper-pagination-bullet-active {
+    background-color: #ffffff;
+    opacity: 1;
+}
+#suggestion_products{
+    background: rgb(28, 37, 57);
+}
 
 
 
