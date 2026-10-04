@@ -61,11 +61,17 @@ class FrontendController extends Controller
 
     public function singleProduct($slug)
     {
-        $product = Product::where('slug', $slug)->first();
+        $product = Product::where('slug', $slug)->firstOrFail();
+        
+        // Decode stored JSON string into a PHP array
+        $images = is_string($product->images) ? json_decode($product->images, true) : ($product->images ?? []);
+
         $company = Company::where('id', $product->company_id)->first();
-        $slider = Slider::where('slier_for', $company->id)->first();
-        $products = Product::where('company_id', $company->id)->where('status', 1)->get();
-        return view('frontend.pages.productSingle', compact('company', 'products', 'slider'));
+        $slider = Slider::where('slier_for', $company->id ?? null)->first();
+        $products = Product::where('company_id', $company->id ?? null)->where('status', 1)->get();
+
+        // Pass $product and $images to the view
+        return view('frontend.pages.productSingle', compact('product', 'images', 'company', 'products', 'slider'));
     }
 
 
