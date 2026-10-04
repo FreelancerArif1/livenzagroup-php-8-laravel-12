@@ -62,7 +62,7 @@
                     <div class="carousel-inner">
                         @foreach ($imageList as $index => $img)
                             <div class="carousel-item {{ $index === 0 ? 'active' : '' }}" id="lightbox-slide-{{ $index }}">
-                                <div class="d-flex align-items-center justify-content-center" style="min-height: 80vh; max-height: 85vh;">
+                                <div class="d-flex align-items-center justify-content-center" style="min-height: 50vh; max-height: 85vh;">
                                     <img src="{{ asset($img) }}" class="img-fluid rounded" style="max-height: 80vh; object-fit: contain;" alt="Slide {{ $index + 1 }}">
                                 </div>
                             </div>
