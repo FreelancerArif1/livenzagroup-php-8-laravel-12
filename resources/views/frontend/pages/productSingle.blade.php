@@ -177,7 +177,7 @@
                         <div class="d-grid gap-3">
                             <a href="tel:+88009639272106" class="btn btn-peach fw-bold py-2-5 rounded-3 callusbtn">Call Us</a>
                             <!-- <a href="https://wa.me/880123456789" class="btn btn-yellow fw-bold py-2-5 rounded-3">Text Us on WhatsApp</a> -->
-                            <a href="/contact-us" class="btn btn-peach fw-bold py-2-5 rounded-3">Get a Quote</a>
+                            <!-- <a href="/contact-us" class="btn btn-peach fw-bold py-2-5 rounded-3">Get a Quote</a> -->
                         </div>
                     </div>
                 </div>

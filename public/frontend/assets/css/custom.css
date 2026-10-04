@@ -1076,6 +1076,18 @@ font-size: 16px;
 
 /* ===== Responsive ===== */
 @media (max-width: 992px) {
+
+    .our_collection{
+        padding-top: 80px;
+    }
+    .our_collection .heading{
+        font-size: 18px;
+    }
+    
+.pmd5 {
+    padding: 1rem 1rem 1rem 1rem !important;
+}
+
     .asymmetric-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(2, 1fr);

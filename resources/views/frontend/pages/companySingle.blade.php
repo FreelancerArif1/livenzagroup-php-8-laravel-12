@@ -112,7 +112,7 @@
 
         <!-- products -->
         @if ($products)
-            <div class="featured-blog section-padding">
+            <div class="featured-blog section-padding our_collection">
                 <div class="container">
                     <div class="section-headings text-center">
                         <h3 class="heading text-40 fw-700 text-uppercase" data-aos="fade-up" data-aos-delay="50">
@@ -128,9 +128,14 @@
 
                                     <div class="col-md-4">
                                         <div class="product_single_card">
-                                            <div class="product_single_img_box">
-                                                <img src="{{ $item->image }}" alt="{{ $item->title }}" class="product_single_img">
-                                            </div>
+
+                                            <a href="{{ route('single.product', $item->slug) }}">
+                                                <div class="product_single_img_box">
+                                                    <img src="{{ $item->image }}" alt="{{ $item->title }}" class="product_single_img">
+                                                </div>
+                                            </a>
+
+
                                             <div class="product_single_body">
                                                 <h3 class="product_single_title">{{ $item->title }}</h3>
                                                 <p class="product_single_subtitle"> {{ \Carbon\Carbon::parse($item->reg_year)->format('Y') }}</p>
